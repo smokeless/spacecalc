@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="spacecalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calc_background" translatesAutoresizingMaskIntoConstraints="NO" id="h1l-0C-WYS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zif-4W-tTi">
+                                <rect key="frame" x="180" y="177" width="240" height="404"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topscreen" translatesAutoresizingMaskIntoConstraints="NO" id="YaE-38-ytF">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="94"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="U4c-bO-CIA"/>
+                                            <constraint firstAttribute="height" constant="94" id="kDn-Nf-Ogd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spacemetal" translatesAutoresizingMaskIntoConstraints="NO" id="n1w-b8-SI8">
+                                        <rect key="frame" x="0.0" y="94" width="240" height="310"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="310" id="PBA-rU-I8o"/>
+                                            <constraint firstAttribute="width" constant="240" id="zGY-Sm-Pus"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h1l-0C-WYS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Mf-dG-Vyt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h1l-0C-WYS" secondAttribute="bottom" id="CUL-Qx-fWx"/>
+                            <constraint firstItem="Zif-4W-tTi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LF9-Oc-jG8"/>
+                            <constraint firstAttribute="trailing" secondItem="h1l-0C-WYS" secondAttribute="trailing" id="hKR-WB-p91"/>
+                            <constraint firstItem="h1l-0C-WYS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l21-yJ-XOd"/>
+                            <constraint firstItem="Zif-4W-tTi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rDg-Yb-K0P"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="428" y="369"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calc_background" width="736" height="999"/>
+        <image name="spacemetal" width="1024" height="1024"/>
+        <image name="topscreen" width="194" height="92"/>
+    </resources>
 </document>
